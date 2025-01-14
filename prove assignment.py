@@ -1,0 +1,8 @@
+name = input('hello how are you?')
+print(name)
+name = input('what is your name?')
+print(name)
+print('nice to meet you!')
+name = input('do you like cookies or brownies better?')
+print('I also love')
+print(name)
