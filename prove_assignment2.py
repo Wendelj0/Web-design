@@ -1,0 +1,13 @@
+print("Please fill in the follow words")
+place = input("A place: ")
+animal = input("An animal plural: ")
+character = input("A Star Wars character: ")
+verb = input("A verb: ")
+noun = input("A noun: ")
+plural_noun = input("A plural noun: ")
+
+print(f"A long time ago in {place.capitalize()} the streets were filled with {animal.lower()}.")
+print(f"No one knew how to stop them, {character.capitalize()} was there to help.")
+print(f"All they could do was throw {plural_noun.lower()} at them. This only caused ")
+print(f"more panic. Everyone was {verb.lower()} away until Chewbacca showed up to")
+print(f"save the day. With one swoop of his {noun.lower()} everything stopped.")
