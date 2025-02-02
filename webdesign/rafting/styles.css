@@ -4,6 +4,7 @@ body {
     grid-template-columns: 2;
     grid-template-rows: 5;
     gap: 5px;
+    background-color: #fcfbfb; 
 }
 body > * {
     padding: 10px;
@@ -27,9 +28,13 @@ footer {
     width: 100%;
     height: 100px;
     background-color: lightgrey;
+    font-size: 1.2em;
     grid-row: 5;
     grid-column: 1 / 2;
 }
+footer p a:hover {
+    text-decoration: underline;
+} 
 .image {
     background-color: brown;
     grid-row: 2 / span 2;
@@ -47,4 +52,35 @@ footer {
 }
 img {
     width: 200px;
+}
+#background {
+    height: 725px;
+}
+nav a:hover {
+    background-color: black;
+    color: #d9c2a3;
+}
+nav a {
+    text-align: center;
+    color: #fcfbfb;
+    text-decoration: none;
+}    
+.icon {
+    width: 80px;
+}
+.logo {
+    width: 80px;
+}
+#hero-msg h1, #hero-msg h4 {
+text-align: center;
+}
+.button-box {
+text-align: center;
+}
+main section {
+     text-align: center;
+}
+content {
+    max-width: 1600px;
+    margin: 0 auto;
 }
