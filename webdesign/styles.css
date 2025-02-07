@@ -1,0 +1,22 @@
+
+html,body {
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#click-me-btn {
+    background-color: beige;
+    border: solid 1px blue;
+    color: azure;
+    font-size: 30px;
+    padding: 20px, 30px;
+    cursor: pointer;
+    box-shadow: -1px;
+    border-radius: 5px;
+}
+#click-me-btn: :hover {
+background-color: black;
+}

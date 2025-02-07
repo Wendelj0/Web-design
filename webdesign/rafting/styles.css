@@ -9,6 +9,7 @@ nav a {
     color: #fcfbfb;
     text-decoration: none;
     text-align: center;
+    padding: 35px;
 }
    
 #hero-msg h1, #hero-msg h4 {
@@ -50,9 +51,14 @@ color: #d9c2a3;
 text-align: center;
 }
 body {
-    background-color: #0d0d0d; 
-    color: #d9c2a3;
-    text-align: center;
+    background-color: #fcfbfb;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin: 0;
 }
 header {
     background-color:rgba(20,30,13, .7);
@@ -76,4 +82,28 @@ footer p a:hover {
     text-decoration: underline;
     text-align: center;
 }    
+.home-title {
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size: 2em;
+}
+.msg {
+    background-color: #6f7364;
+    line-height: 1.5em;
+  }
+  .book, .join {
+    background-color: #d9c2a3;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+main section img {
+    box-sizing: border-box;
+}
+font-family: Helvetica, Arial, sans-serif;
     
