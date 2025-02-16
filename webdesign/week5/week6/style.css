@@ -1,0 +1,31 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    background-color: aqua;
+}
+#first {
+background-color: beige;
+    grid-column: 1 / span 3;
+    grid-row: span 1;
+}
+#second {
+    background-color: aqua;
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+#third {
+    background-color: brown;
+    grid-column: 1 span 2;
+    grid-row: span 2;
+}
+#fourth {
+    background-color: black;
+    grid-column: span 3;
+    grid-row: span 2;
+}
