@@ -8,6 +8,6 @@ while yourword != magicword:
     yourword = str(input("guess again: "))
     if yourword == magicword:
         print("you guessed it!")
-        print(counter)
+        print(f"it took you {counter} tries!")
 print("good job!")
  
