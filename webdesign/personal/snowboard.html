@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowboard Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: left;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+        .card p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Snowboard Collection</h1>
+        <div class="grid">
+            <div class="card">
+                <img src="https://example.com/all-mountain.jpg" alt="All-Mountain Explorer">
+                <div class="card-content">
+                    <h2>All-Mountain Explorer</h2>
+                    <p>A versatile snowboard perfect for any terrain. Ideal for riders who want to do a bit of everything.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://example.com/freestyle.jpg" alt="Freestyle Trickster">
+                <div class="card-content">
+                    <h2>Freestyle Trickster</h2>
+                    <p>Designed for the park and halfpipe, this board is lightweight with excellent pop for tricks.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://example.com/powder.jpg" alt="Powder Surfer">
+                <div class="card-content">
+                    <h2>Powder Surfer</h2>
+                    <p>Perfect for deep snow, this board provides superior float and smooth turns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
