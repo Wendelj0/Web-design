@@ -48,7 +48,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 300px;
-            text-align: left;
+            text-align: center;
         }
         .card img {
             width: 100%;
@@ -67,10 +67,25 @@
         }
         footer {
             background: #333;
-            color: white;
+            color: #81b29a;
             text-align: center;
             padding: 20px;
             position: relative;
+        }
+        #proto-slinger {
+            width: 100%;
+            height: 325px;
+            object-fit: cover;
+        }
+        #family-tree {
+            width: 100%;
+            height: 325px;
+            object-fit: cover;
+        }
+        #lid-tech-orca {
+            width: 100%;
+            height: 325px;
+            object-fit: cover;
         }
 
     </style>
@@ -80,21 +95,22 @@
         <h1>Our Snowboard Collection</h1>
         <div class="grid">
             <div class="card">
-                <img src="https://example.com/all-mountain.jpg" alt="All-Mountain Explorer">
+                <img id="lid-tech-orca" src="lid-tech-orca.webp" alt="All-Mountain Explorer">
                 <div class="card-content">
                     <h2>All-Mountain Explorer</h2>
                     <p>A versatile snowboard perfect for any terrain. Ideal for riders who want to do a bit of everything.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://example.com/freestyle.jpg" alt="Freestyle Trickster">
+                <img id="proto-slinger" src="NS-proto-slinger.jpeg" alt="Never Summer proto slinger snowboard">
                 <div class="card-content">
+                    
                     <h2>Freestyle Trickster</h2>
                     <p>Designed for the park and halfpipe, this board is lightweight with excellent pop for tricks.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://example.com/powder.jpg" alt="Powder Surfer">
+                <img id="family-tree" src="family-tree.webp" alt="Powder Surfer">
                 <div class="card-content">
                     <h2>Powder Surfer</h2>
                     <p>Perfect for deep snow, this board provides superior float and smooth turns.</p>
@@ -103,7 +119,7 @@
         </div>
     </div>
     <footer>
-        <p>Dry Oar &copy; 2025 - Jacob Wendel</p>
+        <p>Shred Life Guide &copy; 2025 - Jacob Wendel</p>
         <p><a href="site-plan.html">Site Plan</a></p>
         <p><a href="contactus.html">Contact Us</a></p>
         <div class="social">

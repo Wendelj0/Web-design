@@ -7,7 +7,7 @@ body {
 
 header {
     background: #333;
-    color: white;
+    color: #fffffc;
     padding: 20px;
     text-align: center;
 }
@@ -25,30 +25,30 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #81b29a;
     text-decoration: none;
     font-weight: bold;
 }
 
 section {
-    padding: 50px;
+    padding: 50px; 
     text-align: center;
     background: white;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 10px;  
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
 }
 
 footer {
     background: #333;
-    color: white;
+    color:#81b29a;
     text-align: center;
     padding: 20px;
     position: relative;
 }
 form {
     display: inline-block;
-    /* Form outline */
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
@@ -59,7 +59,6 @@ form {
   }
   
   label {
-    /* Uniform size & alignment */
     display: inline-block;
     min-width: 90px;
     text-align: right;
@@ -67,40 +66,29 @@ form {
   
   input,
   textarea {
-    /* To make sure that all text fields have the same font settings
-       By default, text areas have a monospace font */
     font: 1em sans-serif;
-    /* Uniform text field size */
     width: 300px;
     box-sizing: border-box;
-    /* Match form field borders */
     border: 1px solid #999;
   }
   
   input:focus,
   textarea:focus {
-    /* Set the outline width and style */
     outline-style: solid;
-    /* To give a little highlight on active elements */
     outline-color: #000;
   }
   
   textarea {
-    /* Align multiline text fields with their labels */
     vertical-align: top;
-    /* Provide space to type some text */
     height: 5em;
   }
   
   .button {
-    /* Align buttons with the text fields */
-    padding-left: 90px; /* same size as the label elements */
+    padding-left: 90px; 
     text-align: left;
   }
   
   button {
-    /* This extra margin represent roughly the same space as the space
-       between the labels and their text fields */
     margin-left: 0.5em;
   }
   .feedback {
@@ -110,9 +98,21 @@ form {
     left: 0;
     right: 0;
     padding: .5em;
-    /* make this element invisible until we are ready for it */
     display: none;      
 }
 .moveDown {
     margin-top: 3em;
 }
+#snow-mass-map {
+  width: 500px;
+  height: 300px;
+}
+#niseko-map {
+  width: 500px;
+}
+#whistler-map {
+  width: 500px;
+  height: 250px;
+}
+
+
