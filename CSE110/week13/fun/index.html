@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jump Game</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #cce7ff; overflow: hidden; font-family: sans-serif; }
+    .game { position: relative; width: 800px; height: 200px; background: #fff; border: 3px solid #333; overflow: hidden; }
+    .player {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      width: 50px;
+      height: 50px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/1046/1046784.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .obstacle {
+      position: absolute;
+      bottom: 0;
+      right: -30px;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/1046/1046795.png'); /* pickle image */
+      background-size: cover;
+      background-position: center;
+      animation: move 2s linear infinite;
+    }
+    @keyframes move {
+      from { right: -30px; }
+      to { right: 850px; }
+    }
+    .jump {
+      animation: jump 0.6s ease-out;
+    }
+    @keyframes jump {
+      0% { bottom: 0; }
+      50% { bottom: 100px; }
+      100% { bottom: 0; }
+    }
+    .score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Music -->
+  <audio id="kahoot-music" src="kahoot_music.mp3" autoplay loop></audio>
+
+  <div class="game">
+    <div class="score">Score: 0</div>
+    <div class="player" id="player"></div>
+    <div class="obstacle" id="obstacle"></div>
+  </div>
+
+  <script>
+    const player = document.getElementById('player');
+    const obstacle = document.getElementById('obstacle');
+    const scoreDisplay = document.querySelector('.score');
+    let score = 0;
+    let isJumping = false;
+    let obstacleSpeed = 2; // Initial obstacle speed (in seconds)
+
+    document.body.addEventListener('keydown', (e) => {
+      if (e.code === 'Space' && !isJumping) {
+        jump();
+      }
+    });
+
+    function jump() {
+      isJumping = true;
+      player.classList.add('jump');
+      setTimeout(() => {
+        player.classList.remove('jump');
+        isJumping = false;
+      }, 600);
+    }
+
+    setInterval(() => {
+      // Speed up the obstacle with time
+      obstacleSpeed = 2 - score / 500; // Increase difficulty over time
+      obstacle.style.animationDuration = `${obstacleSpeed}s`;
+
+      // Increase obstacle size when score > 200
+      if (score > 200) {
+        obstacle.style.width = '40px'; // Make obstacles a bit bigger
+        obstacle.style.height = '40px';
+      } else {
+        obstacle.style.width = '30px'; // Default size
+        obstacle.style.height = '30px';
+      }
+
+      // Get the player's and obstacle's positions
+      const playerTop = parseInt(window.getComputedStyle(player).getPropertyValue('bottom'));
+      const obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue('right'));
+
+      // Check for collision
+      if (obstacleLeft > 750 && obstacleLeft < 800 && playerTop <= 50) {
+        alert('Game Over! Your score: ' + score);
+        score = 0; // Reset score after collision
+      } else {
+        score++;
+      }
+
+      scoreDisplay.textContent = 'Score: ' + score;
+    }, 100);
+  </script>
+</body>
+</html>
